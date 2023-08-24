@@ -1,7 +1,7 @@
 import { useGetBannersQuery } from '@/api/GetAllData'
 import { CustomSlider } from '@/components/CustomSlider'
-import { Box, Container, Skeleton, Stack } from '@mui/material'
-import React, { FC } from 'react'
+import { Container, Skeleton, Stack } from '@mui/material'
+import { FC } from 'react'
 
 export const HomeSlider: FC = () => {
     const { data, isLoading, isError } = useGetBannersQuery(null)
