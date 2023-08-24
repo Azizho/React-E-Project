@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { HeaderTop } from './header-top'
 import { HeaderBottom } from './header-bottom'
 
