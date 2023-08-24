@@ -29,6 +29,9 @@ export const theme = (mode: PaletteMode) =>
         },
         palette: {
             mode,
+            primary: {
+                main: "#019E7F",
+            },
         },
         breakpoints: {
             values: {

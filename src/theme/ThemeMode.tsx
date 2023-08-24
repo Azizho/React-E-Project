@@ -20,7 +20,6 @@ export const ThemeModeProvider: React.FC<ThemeModeProps> = ({ children }) => {
     const themeMode = React.useMemo(() => ({
         toggleThemeMode: () => {
             setMode((prev) => (prev === "light" ? "dark" : "light"));
-            localStorage.setItem("themeMode", mode === "light" ? "dark" : "light")
         },
         mode
     }), [mode])

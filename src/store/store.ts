@@ -1,15 +1,17 @@
-import { MessagesApi } from "@/api/MessagesApi";
+import { GetAllData } from "@/api/GetAllData";
+import debounceSlice from "@/slices/debounceSlice";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 const reducer = combineReducers({
-    [MessagesApi.reducerPath]: MessagesApi.reducer,
+    [GetAllData.reducerPath]: GetAllData.reducer,
+    debounceSlice: debounceSlice,
 });
 
 export const store = configureStore({
     reducer,
     devTools: true,
     middleware: getDefaultMiddleware =>
-        getDefaultMiddleware().concat(MessagesApi.middleware),
+        getDefaultMiddleware().concat(GetAllData.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
