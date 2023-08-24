@@ -1,5 +1,5 @@
 import { Box, Skeleton, Stack, Typography } from '@mui/material'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { CardProps } from './type'
 import { CartCustomImg, CartItem } from './style'
 
