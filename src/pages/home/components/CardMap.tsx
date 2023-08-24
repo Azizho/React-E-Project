@@ -3,7 +3,6 @@ import { useGetDataQuery } from '@/api/GetAllData'
 import { useAppSelector } from '@/store/hooks'
 import { DataType } from "@/types/DataType";
 import { Container, Grid } from '@mui/material';
-import React from 'react'
 const emptyArray = [
     { id: 1 },
     { id: 2 },
