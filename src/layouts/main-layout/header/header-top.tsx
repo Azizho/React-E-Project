@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { BorderCustomStack } from './style'
-import { Button, Container, Stack } from '@mui/material'
+import { Button, Container } from '@mui/material'
 import { Logo } from '@/assets/icons/logo'
 import { Link } from 'react-router-dom'
 import useThemeMode from '@/theme/ThemeMode'
