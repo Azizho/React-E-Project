@@ -1,17 +1,16 @@
 import { Container, Stack } from '@mui/material'
 import { SearchTextField } from './style'
-import React from 'react'
+import React, { FC } from 'react'
 import { useDebounce } from '@/hooks/useDebounce'
-import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import { useAppDispatch } from '@/store/hooks'
 import { setDebounceValue } from '@/slices/debounceSlice'
 
-export const HeaderBottom = () => {
+export const HeaderBottom: FC = () => {
     const [searchText, setSearchText] = React.useState('')
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setSearchText(e.target.value)
     }
     const debounceValue = useDebounce(searchText !== '' ? searchText : "  ");
-    const storeDebounce = useAppSelector(state => state.debounceSlice)
     const dispatch = useAppDispatch()
     React.useEffect(() => {
         dispatch(setDebounceValue({ debounceValue }))

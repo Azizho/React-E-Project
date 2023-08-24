@@ -9,7 +9,10 @@ export const GetAllData = createApi({
         getData: builds.query({
             query: (data: string) => `/data?q=${data ? data : "  "}`,
         }),
+        getBanners: builds.query({
+            query: () => `/banners`,
+        }),
     }),
 });
 
-export const { useGetDataQuery } = GetAllData;
+export const { useGetDataQuery, useGetBannersQuery } = GetAllData;

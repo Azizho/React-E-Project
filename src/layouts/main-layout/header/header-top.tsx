@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { BorderCustomStack } from './style'
 import { Button, Container, Stack } from '@mui/material'
 import { Logo } from '@/assets/icons/logo'
 import { Link } from 'react-router-dom'
 import useThemeMode from '@/theme/ThemeMode'
 
-export const HeaderTop = () => {
+export const HeaderTop: FC = () => {
     const { mode, toggleThemeMode } = useThemeMode()
     return (
         <BorderCustomStack>

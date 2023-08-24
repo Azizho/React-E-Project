@@ -1,10 +1,18 @@
-import { Container, TextField } from '@mui/material'
-import React from 'react'
+import { FC } from 'react'
+import { HomeSlider } from './components/HomeSlider'
+import { CardMap } from './components/CardMap'
+import { CardsSection } from './style'
 
-export const Home = () => {
+export const Home: FC = () => {
     return (
-        <button>
-            ss
-        </button>
+        <>
+            <section id='slider'>
+                <HomeSlider />
+            </section>
+            <CardsSection id='cards'>
+                <CardMap />
+            </CardsSection>
+        </>
+
     )
 }
