@@ -1,8 +1,8 @@
-import { Card } from '@/components/card/card';
-import { useGetDataQuery } from '@/api/GetAllData';
-import { useAppSelector } from '@/store/hooks';
-import { DataType } from '@/types/DataType';
-import { Container, Grid, Typography } from '@mui/material';
+import { Card } from '@/components/card/card'
+import { useGetDataQuery } from '@/api/GetAllData'
+import { useAppSelector } from '@/store/hooks'
+import { DataType } from '@/types/DataType'
+import { Container, Grid, Typography } from '@mui/material'
 const emptyArray = [
 	{ id: 1 },
 	{ id: 2 },
@@ -16,14 +16,14 @@ const emptyArray = [
 	{ id: 10 },
 	{ id: 11 },
 	{ id: 12 },
-];
+]
 
 export const CardMap = () => {
 	const debounceValue = useAppSelector(
 		state => state.debounceSlice.debounceValue
-	);
-	const { data, isLoading, isError } = useGetDataQuery(debounceValue);
-	if (isLoading || isError) {
+	)
+	const { data, isLoading, isError, isSuccess, isFetching } = useGetDataQuery(debounceValue)
+	if (isLoading || isFetching) {
 		return (
 			<Container>
 				<Grid container rowSpacing={'45.11px'} columnSpacing={'24px'}>
@@ -34,15 +34,23 @@ export const CardMap = () => {
 					))}
 				</Grid>
 			</Container>
-		);
+		)
 	}
 
-	if (data.length <= 0) {
+	if (isError) {
+		return (
+			<Container>
+				<h1>An error occurred while connecting to the server</h1>
+			</Container>
+		)
+	}
+
+	if (data.length <= 0 && isSuccess) {
 		return (
 			<Container>
 				<Typography variant={'h1'}>Продукт не найден :(</Typography>
 			</Container>
-		);
+		)
 	}
 	return (
 		<Container>
@@ -54,5 +62,5 @@ export const CardMap = () => {
 				))}
 			</Grid>
 		</Container>
-	);
-};
+	)
+}
