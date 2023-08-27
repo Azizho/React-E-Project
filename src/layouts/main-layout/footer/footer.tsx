@@ -11,7 +11,7 @@ export const Footer = () => {
 		<StyledFooterStack>
 			<Container>
 				<Stack
-					direction={'row'}
+					direction={{ xl: "row", lg: "row", md: "row", sm: "column" }}
 					justifyContent={'space-between'}
 					alignItems={'center'}
 				>
