@@ -20,7 +20,7 @@ export const FooterRight = () => {
 		setPriceValue(e.target.value)
 	}
 	return (
-		<Stack direction={'row'} alignItems={'center'} gap={'24px'}>
+		<Stack direction={{ xl: "row", lg: "row", md: "column" }} alignItems={'center'} gap={'24px'}>
 			<Stack direction={'row'} gap={'8px'} alignItems={'center'}>
 				<WorldIcon mode={mode} />
 				<Select onChange={handleLanguageChange} value={languageValue}>
