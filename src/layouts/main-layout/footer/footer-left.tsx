@@ -1,9 +1,9 @@
-import { ChooseIcon } from '@/assets/icons/choose';
-import { Stack, Typography } from '@mui/material';
+import { ChooseIcon } from '@/assets/icons/choose'
+import { Stack, Typography } from '@mui/material'
 
 export const FooterLeft = () => {
 	return (
-		<Stack direction={'row'} gap={'10px'} alignItems={'center'}>
+		<Stack direction={{ xl: "row", lg: "row", md: "column" }} gap={'10px'} alignItems={'center'}>
 			<Typography variant='body1'>&copy; 2023 Airbnb, Inc.</Typography>
 			<Typography variant='body1'>·</Typography>
 			<Typography variant='body1'>Terms</Typography>
@@ -15,5 +15,5 @@ export const FooterLeft = () => {
 			<Typography variant='body1'>Your Privacy Choices</Typography>
 			<ChooseIcon />
 		</Stack>
-	);
-};
+	)
+}
