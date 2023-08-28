@@ -1,7 +1,8 @@
-import { Box, Skeleton, Stack, Typography } from '@mui/material';
-import { FC } from 'react';
-import { CardProps } from './type';
-import { CartCustomImg, CartItem } from './style';
+import { Box, Skeleton, Stack, Typography } from '@mui/material'
+import { FC } from 'react'
+import { CardProps } from './type'
+import { CartCustomImg, CartItem } from './style'
+import { RatingIcon } from '@/assets/icons/rating-icon'
 
 export const Card: FC<CardProps> = ({
 	id,
@@ -40,10 +41,10 @@ export const Card: FC<CardProps> = ({
 					</Box>
 				</Box>
 			</Stack>
-		);
+		)
 	}
 
-	const trimPrice = price?.trim().split(/\s+/);
+	const trimPrice = price?.trim().split(/\s+/)
 	return (
 		<CartItem to={`/cart-detail/${id}`}>
 			<Box maxWidth={'302px'}>
@@ -55,7 +56,7 @@ export const Card: FC<CardProps> = ({
 				>
 					<Typography variant={'subtitle1'}>{title}</Typography>
 					<Stack direction={'row'} alignItems={'center'} gap={'4px'}>
-						{/* <RaitingStar /> */}
+						<RatingIcon />
 						<Typography variant='body1'>{rating}</Typography>
 					</Stack>
 				</Stack>
@@ -69,5 +70,5 @@ export const Card: FC<CardProps> = ({
 				</Stack>
 			</Box>
 		</CartItem>
-	);
-};
+	)
+}

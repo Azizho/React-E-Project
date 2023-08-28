@@ -1,4 +1,4 @@
-import { useGetBannersQuery } from '@/api/GetAllData'
+import { useGetBannersQuery } from '@/api/GetDataApi'
 import { CustomSlider } from '@/components/CustomSlider'
 import { Container, Skeleton, Stack } from '@mui/material'
 import { FC } from 'react'

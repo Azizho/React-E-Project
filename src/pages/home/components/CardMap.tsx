@@ -1,5 +1,5 @@
+import { useGetDataQuery } from '@/api/GetDataApi'
 import { Card } from '@/components/card/card'
-import { useGetDataQuery } from '@/api/GetAllData'
 import { useAppSelector } from '@/store/hooks'
 import { DataType } from '@/types/DataType'
 import { Container, Grid, Typography } from '@mui/material'
